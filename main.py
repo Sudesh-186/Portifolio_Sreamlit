@@ -67,7 +67,8 @@ with st.container():
 			'''
 			)
 	with col2:
-		st_lottie(lottie_file, height=300, key='coding')
+		st.empty()
+		# st_lottie(lottie_file, height=300, key='coding')
 
 #----My Projects----
 with st.container():
