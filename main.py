@@ -1,7 +1,7 @@
 from pathlib import Path
 import requests
 import streamlit as st
-# from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie
 from PIL import Image
 
 #----General Settings----
@@ -36,7 +36,7 @@ def local_css(file_name):
 	with open(file_name) as f:
 		st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# local_css("style/style.css")
+local_css("style/style.css")
 
 #----About Me----
 with st.container():
@@ -49,7 +49,6 @@ with st.container():
 	with col2:
 		st.title(f"Hi, I'm {name} :wave:")
 		st.write(description)
-		st.write(':email:', Email)
 
 #----What can I do----
 with st.container():
@@ -67,8 +66,7 @@ with st.container():
 			'''
 			)
 	with col2:
-		st.empty()
-		# st_lottie(lottie_file, height=300, key='coding')
+		st_lottie(lottie_file, height=300, key='coding')
 
 #----My Projects----
 with st.container():
